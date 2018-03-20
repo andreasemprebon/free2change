@@ -1,0 +1,170 @@
+/**
+ * ############
+ * ### POST ###
+ * ############
+ */
+
+.post {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: center;
+    position: relative;
+    font-size: 15px;
+}
+
+.post .testo {
+    padding-left: 15px;
+    padding-right: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+}
+
+.post .testo .titolo {
+    width: 100%;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ffb148;
+    position: relative;
+}
+
+
+.post .testo .titolo .link {
+    width: 80%;
+}
+
+.post .testo .titolo a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffb148;
+}
+
+.post .testo .estratto {
+    text-align: justify;
+    font-size: 15px;
+}
+
+/**
+ * Autore
+ */
+
+.post .testo .autore {
+    font-size: 14px;
+    color: #3b3b3b;
+}
+
+/**
+ * Commenti
+ */
+
+.post .titolo .icon.commenti {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.post .titolo .icon.commenti a {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 300;
+}
+
+.post .titolo .icon.commenti:hover a {
+    color: #ffb148;
+}
+
+.post .titolo .icon.commenti .numero {
+    position: relative;
+    top: -13px;
+}
+
+.post .titolo .icon.commenti svg {
+    height: 30px;
+}
+
+.post .titolo .icon.commenti:hover svg {
+    fill: #ffb148;
+}
+
+/**
+ * IMMAGINE
+ */
+
+.post .image {
+    position: relative;
+}
+
+.post .image .contenuto {
+    box-sizing: border-box;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+}
+
+.post .image .data {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    padding-left: 5px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.post .image .data .day {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.post .image .data .day:after {
+    content: "/";
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.post .image .data .mese-anno {
+    font-size: 14px;
+}
+
+/**
+ * Pulsante Continua
+ */
+
+div.pulsante {
+    margin-top: 13px;
+    position: absolute;
+    bottom: 10px;
+    left: 315px;
+}
+
+.btn-continua-lettura {
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid #ffb148;
+    background: none;
+    border-radius: 4px;
+    color: #ffb148;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-continua-lettura:hover {
+    background: #ffb148;
+    color: #FFFFFF;
+}
+
+/**
+ * Separatore
+ */
+
+.separatore-post {
+    width: 300px;
+    height: 3px;
+    background-color: #ffb148;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
