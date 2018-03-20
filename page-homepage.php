@@ -10,11 +10,21 @@
         /**
          * Imposto l'altezzo dello slideshow
          */
+        function getHeight(elem) {
+            var height = $(elem + ":visible").outerHeight();
+            if ( isNaN(height) ) {
+              return 0;
+            }
+            return height;
+        }
+
         function setSlideshowHeight() {
             var slideshowHeight = $(window).height() -
-                $(".main-header").outerHeight() -
-                $(".menu").outerHeight() -
-                $("#wpadminbar").outerHeight();
+                getHeight(".main-header") -
+                getHeight(".menu") -
+                getHeight("#wpadminbar") -
+                parseInt( $(".slideshow").css("margin-top") );
+            slideshowHeight = Math.min($(".slideshow").width(), slideshowHeight);
             $(".slideshow").height( slideshowHeight + "px"  );
         }
 

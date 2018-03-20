@@ -82,12 +82,14 @@
  */
  @media only screen and (max-width: 768px) {
 
+   .slideshow {
+      margin-top: 10px;
+   }
+
    .slideshow .container .image {
      width: 100%;
      border-right: none !important;
      border-left: none !important;
    }
-
-
 
  }
