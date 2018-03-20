@@ -30,6 +30,7 @@
     <!-- CSS Personalizzati -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css" />
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/header.css" />
@@ -38,6 +39,8 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/index.css" />
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/home.css" />
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/post.css" />
+
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/single.css" />
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/footer.css" />
 
