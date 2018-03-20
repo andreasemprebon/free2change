@@ -16,7 +16,7 @@ $postData = get_posts($postParameters);
 
         <div class="image">
 
-            <div class="contenuto" style="background-image: url('<?php echo catch_first_image(); ?>');"></div>
+            <a class="contenuto" href="<?php echo esc_url( get_permalink() ); ?>" style="background-image: url('<?php echo catch_first_image(); ?>');"></a>
 
             <div class="data">
                 <span class="day">

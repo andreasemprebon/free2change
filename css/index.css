@@ -42,7 +42,7 @@ div.navigazione .btn a:hover {
 div.navigazione .newer {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 10px;
 }
 
 div.navigazione .older {
@@ -78,6 +78,10 @@ div.navigazione .older {
    #main .container {
        width: calc(100% - 10px);
        padding-left: 10px;
+   }
+
+   div.navigazione .btn a span {
+     display: none;
    }
 
 }

@@ -7,6 +7,7 @@
          */
         $(".menu a.blog").addClass("active");
 
+        $()
 
     });
 </script>
@@ -31,8 +32,8 @@
                 // End the loop.
                 endwhile;
 
-                $olderPost = get_next_posts_link("&larr; Articoli meno recenti");
-                $newerPost = get_previous_posts_link("Articoli più recenti &rarr;");
+                $olderPost = get_next_posts_link("&larr;<span> Articoli meno recenti</span>");
+                $newerPost = get_previous_posts_link("<span>Articoli più recenti </span>&rarr;");
                 ?>
 
             <div class="navigazione">
