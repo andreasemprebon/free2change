@@ -58,3 +58,26 @@ div.navigazione .older {
 .sidebar {
     width: 30%;
 }
+
+/**
+ * ##############
+ * ### MOBILE ###
+ * ##############
+ */
+
+ @media only screen and (max-width: 768px) {
+
+   .sidebar {
+     width: 0px;
+   }
+
+   #main {
+     width: 100%;
+   }
+
+   #main .container {
+       width: calc(100% - 10px);
+       padding-left: 10px;
+   }
+
+}

@@ -72,7 +72,7 @@
 
         <div class="logo-border">
             <div class="logo">
-                <a href="#" class="logo-bg">
+                <a href="<?php echo get_home_url(); ?>" class="logo-bg">
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png" alt="Free2Change" />
                 </a>
             </div>
@@ -83,6 +83,8 @@
         </div>
     </div>
 </header>
+
+<div class="clear"></div>
 
 <div class="menu">
     <div class="container">

@@ -92,9 +92,10 @@ header.main-header .social .icon svg:hover {
 }
 
 /**
- * MOBILE
+ * ##############
+ * ### MOBILE ###
+ * ##############
  */
-
 
  @media only screen and (max-width: 768px) {
 
@@ -110,6 +111,5 @@ header.main-header .social .icon svg:hover {
    .main-header .right-link {
      display: none;
    }
-
 
 }

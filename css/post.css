@@ -4,7 +4,7 @@
  * ############
  */
 
-.post {
+div.post {
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -94,6 +94,9 @@
 
 .post .image {
     position: relative;
+    flex-grow: 0;
+    flex-basis: 300px;
+    width: 100%;
 }
 
 .post .image .contenuto {
@@ -167,4 +170,54 @@ div.pulsante {
     background-color: #ffb148;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+/**
+ * ##############
+ * ### MOBILE ###
+ * ##############
+ */
+
+ @media only screen and (max-width: 768px) {
+   div.post {
+     flex-wrap: wrap;
+     width: calc(100% - 10px);
+   }
+
+   .post .image {
+     width: 100%;
+     flex-basis: 100%;
+   }
+
+   .post .image .contenuto {
+     width: 100%;
+     height: 180px;
+   }
+
+   .post .testo {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 10px;
+   }
+
+   .post .testo .estratto {
+     display: none;
+   }
+
+   .post .testo .titolo .link {
+     width: 100%;
+   }
+
+   .post .titolo .icon.commenti {
+      display: none;
+   }
+
+   div.pulsante {
+     display: none;
+   }
+
+   .separatore-post {
+     width: calc(100% - 10px);
+   }
+
 }
