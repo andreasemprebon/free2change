@@ -103,7 +103,7 @@ header.main-header .social .icon svg:hover {
  header.main-header .mobile-menu {
      display: none;
      float: right;
-     margin-top: 28px;
+     margin-top: 21px;
  }
 
  header.main-header .mobile-icon {
@@ -113,8 +113,8 @@ header.main-header .social .icon svg:hover {
 
  header.main-header .mobile-icon .icon {
      float: left;
-     padding-right: 5px;
-     padding-left: 5px;
+     padding: 5px;
+     border-radius: 50%;
      margin-right: 5px;
      margin-left: 5px;
      background-color: #FFFFFF;
@@ -125,7 +125,7 @@ header.main-header .social .icon svg:hover {
  }
 
  header.main-header .mobile-icon .icon svg {
-     height: 50px;
+     height: 40px;
      fill: #000000;
  }
 
@@ -134,14 +134,49 @@ header.main-header .social .icon svg:hover {
      fill: #ffb148;
  }
 
+/**
+ * Animazioni
+ */
+.rotazioneOraria {
+  animation-duration: 0.5s;
+  animation-name: rotazioneOraria;
+  animation-fill-mode: forwards;
+}
+
+ @keyframes rotazioneOraria {
+   from {
+     transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.rotazioneAntiOraria {
+  animation-duration: 0.5s;
+  animation-name: rotazioneAntiOraria;
+  animation-fill-mode: forwards;
+}
+
+ @keyframes rotazioneAntiOraria {
+   from {
+     transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
  @media only screen and (max-width: 768px) {
 
    header.main-header {
-     max-height: 93px;
+     max-height: 88px;
    }
 
    header.main-header .logo img {
-     max-height: 100px;
+     max-height: 90px;
    }
 
    header.main-header .logo {

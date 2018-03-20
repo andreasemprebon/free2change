@@ -58,6 +58,24 @@
 
  @media only screen and (max-width: 768px) {
    .menu {
-     display: none;
+      display: none;
+   }
+
+   .menu .container ul li {
+     display: block;
+     text-align: left;
+     margin-left: 20px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+   }
+
+   .menu .container ul li:after {
+     content: "";
+   }
+
+   .menu .container ul li:before {
+     content: "/";
+     color: #ffb148;
+     margin-right: 15px;
    }
  }

@@ -45,6 +45,26 @@
 
 <body>
 
+<script text="type/javascript">
+    $(document).ready(function () {
+        /**
+         * Se sono nella versione mobile e clicco
+				 * sul pulsante More con i tre puntini,
+				 * mostro il menù
+         */
+        $(".mobile-menu").on("click", ".icon.more", function () {
+						if ( $(this).hasClass("rotazioneOraria") ) {
+							$(this).addClass("rotazioneAntiOraria").removeClass("rotazioneOraria");
+							$(".menu").hide(500);
+						} else {
+							$(this).addClass("rotazioneOraria").removeClass("rotazioneAntiOraria");
+							$(".menu").show(500);
+						}
+				});
+
+    });
+</script>
+
 
 <header class="main-header">
     <div class="header-container">
