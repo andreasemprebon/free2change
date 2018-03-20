@@ -73,7 +73,8 @@
         <div class="logo-border">
             <div class="logo">
                 <a href="<?php echo get_home_url(); ?>" class="logo-bg">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png" alt="Free2Change" />
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png" alt="Free2Change" class="logo-desktop"/>
+										<img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo-mobile.png" alt="Free2Change" class="logo-mobile"/>
                 </a>
             </div>
         </div>
@@ -81,6 +82,25 @@
         <div class="right-link">
             Ciao
         </div>
+
+				<div class="mobile-menu">
+					<div class="mobile-icon">
+
+							<div class="icon blog">
+									<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>">
+											<?php include(get_stylesheet_directory() . "/img/menu/blog.svg"); ?>
+									</a>
+							</div>
+
+							<div class="icon more">
+									<a href="#">
+											<?php include(get_stylesheet_directory() . "/img/menu/more.svg"); ?>
+									</a>
+							</div>
+
+					</div>
+				</div>
+
     </div>
 </header>
 

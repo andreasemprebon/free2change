@@ -7,7 +7,7 @@
          */
         $(".menu a.blog").addClass("active");
 
-        $()
+        $(".mobile-menu div.blog").addClass("active");
 
     });
 </script>

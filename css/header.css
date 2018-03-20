@@ -50,6 +50,10 @@ header.main-header .logo img {
     max-height: 130px;
 }
 
+header.main-header .logo img.logo-mobile {
+  display: none;
+}
+
 header.main-header a.logo-bg {
     background: #FFFFFF;
     padding-left: 10px;
@@ -96,10 +100,47 @@ header.main-header .social .icon svg:hover {
  * ### MOBILE ###
  * ##############
  */
+ header.main-header .mobile-menu {
+     display: none;
+     float: right;
+     margin-top: 28px;
+ }
+
+ header.main-header .mobile-icon {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ header.main-header .mobile-icon .icon {
+     float: left;
+     padding-right: 5px;
+     padding-left: 5px;
+     margin-right: 5px;
+     margin-left: 5px;
+     background-color: #FFFFFF;
+ }
+
+ header.main-header .mobile-icon .icon:last-child {
+   margin-right: 20px;
+ }
+
+ header.main-header .mobile-icon .icon svg {
+     height: 50px;
+     fill: #000000;
+ }
+
+ header.main-header .mobile-icon .icon.active svg,
+ header.main-header .mobile-icon .icon svg:hover {
+     fill: #ffb148;
+ }
 
  @media only screen and (max-width: 768px) {
 
    header.main-header {
+     max-height: 93px;
+   }
+
+   header.main-header .logo img {
      max-height: 100px;
    }
 
@@ -107,9 +148,20 @@ header.main-header .social .icon svg:hover {
      text-align: left;
    }
 
+   header.main-header .logo img.logo-desktop {
+      display: none;
+   }
+
+   header.main-header .logo img.logo-mobile {
+     display: inline;
+   }
+
    .main-header .left-link,
    .main-header .right-link {
      display: none;
    }
 
+   header.main-header .mobile-menu {
+     display: block;
+   }
 }
