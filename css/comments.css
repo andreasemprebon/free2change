@@ -19,12 +19,20 @@
 }
 
 .single .commenti .intestazione-container .intestazione-desc {
-  margin-left: 20%;
+  margin-left: calc(20% - 5px);
   padding-left: 5px;
   padding-right: 5px;
   background-color: #f9f9f9;
   line-height: 20px;
   float: left;
+}
+
+/**
+ * Nessun commento
+ */
+.single .commenti .nessun-commento {
+  margin-top: 20px;
+  margin-left: 20%;
 }
 
 /**
@@ -148,6 +156,7 @@
  */
 #respond {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #respond .intestazione {
@@ -162,7 +171,7 @@
 }
 
 #respond .intestazione-container .intestazione-desc {
-  margin-left: 20%;
+  margin-left: calc(20% - 5px);
   padding-left: 5px;
   padding-right: 5px;
   background-color: #f9f9f9;
@@ -184,7 +193,63 @@
   color: #ffb148;
 }
 
+#respond #cancel-comment-reply-link {
+  margin-left: 20%;
+  margin-top: 20px;
+  display: block;
+  color: #ffb148;
+}
+
+#respond #cancel-comment-reply-link:hover {
+  text-decoration: underline;
+}
+
+#respond .logged-in-as {
+    margin-bottom: 20px;
+}
+
+#respond .logged-in-as a {
+  color: #000000;
+}
+
 #commentform {
   margin-left: 20%;
   margin-top: 20px;
+  margin-right: 30px;
+}
+#commentform p {
+    margin-top: 10px;
+}
+
+#commentform p label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+#commentform p input,
+#commentform p textarea {
+  width: calc(100% - 20px);
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: 1px solid #EEE;
+  padding: 10px;
+}
+
+#commentform p input[type=submit] {
+    width: auto;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px 20px 10px 20px;
+    border: 3px solid #ffb148;
+    background: none;
+    border-radius: 4px;
+    color: #ffb148;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#commentform p input[type=submit]:hover {
+    background: #ffb148;
+    color: #FFFFFF;
 }

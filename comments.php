@@ -4,7 +4,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="commenti">
+<div class="commenti" id="comments">
 
 	<div class="intestazione">
 			<div class="intestazione-container">
@@ -33,16 +33,20 @@ if ( post_password_required() ) {
 				);
 			?>
 		</ol>
-
+	<?php else: ?>
+			<p class="nessun-commento">
+				Non c'è ancora alcun commento a questo articolo.
+			</p>
 	<?php endif; ?>
 
 	<?php comment_form(array(
 		'title_reply' => '<div class="intestazione"><div class="intestazione-container">
-												<div class="intestazione-desc">Lascia un commento</div></div></div>',
+												<div class="intestazione-desc">Lascia un commento</div></div></div><div class="clear"></div>',
 		'title_reply_to' => '<div class="intestazione"><div class="intestazione-container">
-												<div class="intestazione-desc">Rispondi a %s <span class="sep">/</span> ',
-		'cancel_reply_link'	=> 'Annulla risposta</div></div></div>',
-		'comment_notes_before' => ''
+												<div class="intestazione-desc">Rispondi a %s</div></div></div><div class="clear"></div>',
+		'cancel_reply_link'	=> 'Annulla risposta',
+		'comment_notes_before' => '',
+		'label_submit' => 'Commenta'
 	)
 	); ?>
 

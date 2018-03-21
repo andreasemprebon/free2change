@@ -36,7 +36,7 @@ $postData = get_posts($postParameters);
                 </div>
 
                 <div class="icon commenti">
-                    <a href="#">
+                    <a href="<?php echo esc_url( get_permalink() ); ?>#comments">
                         <?php include(get_stylesheet_directory() . "/img/post/comment-bubble.svg"); ?>
                         <span class="numero">
                             <?php echo get_comments_number(); ?>

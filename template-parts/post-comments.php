@@ -10,7 +10,7 @@ function free2change_comments( $comment, $args, $depth ) {
 				global $post;
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-			<div class="commento">
+			<div class="commento" id="comment-<?php comment_ID(); ?>">
         <div class="avatar">
           <?php echo get_avatar( $comment, $size = '50' ); ?>
 					<?php if ($comment->user_id === $post->post_author): // Se chi commenta è l'autore, lo segnalo ?>
