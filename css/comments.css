@@ -1,0 +1,190 @@
+/**
+ * Commenti
+ */
+
+.single .commenti {
+  padding-top: 20px;
+  background-color: #f9f9f9;
+}
+
+.single .commenti .intestazione {
+  height: 20px;
+  font-size: 20px;
+}
+
+.single .commenti .intestazione-container {
+  width: 100%;
+  border-bottom: 1px solid #ffb148;
+  height: 50%;
+}
+
+.single .commenti .intestazione-container .intestazione-desc {
+  margin-left: 20%;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #f9f9f9;
+  line-height: 20px;
+  float: left;
+}
+
+/**
+ * Commento
+ */
+.commenti ol {
+  margin-left: 20%;
+  margin-right: 30px;
+}
+
+.commenti ol.children {
+  margin-left: 50px;
+  margin-right: 0px;
+}
+
+.commenti ol li.comment .commento {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #EEE;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.commenti ol li.comment .commento .avatar {
+  flex-basis: 50px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  position: relative;
+}
+
+.commenti ol li.comment .commento .avatar img {
+  border-radius: 50%;
+  border: 1px solid #EEE;
+}
+
+.commenti ol li.comment .commento .avatar .commento-dell-autore {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 0px;
+  right: -5px;
+}
+
+.commenti ol li.comment .commento .desc {
+  text-align: justify;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.commenti ol li.comment .commento .desc .moderazione {
+  padding: 5px 10px 5px 10px;
+  color: #856404;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: .25rem;
+}
+
+.commenti ol li.comment .commento .desc a {
+  color: #ffb148;
+}
+
+.commenti ol li.comment .commento .desc .nome {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commenti ol li.comment .commento .desc .nome,
+.commenti ol li.comment .commento .desc .nome a {
+  font-size: 18px;
+  color: #ffb148;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.commenti ol li.comment .commento .desc .nome .data {
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+  text-align: right;
+}
+
+.commenti ol li.comment .commento .desc .azioni {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.commenti ol li.comment .commento .desc .azioni a {
+  color: #312f30;
+  text-decoration: none;
+}
+
+.commenti ol li.comment .commento .desc .azioni a:hover {
+  color: #ffb148;
+  text-decoration: none;
+}
+
+.commenti ol li.comment .commento .desc .azioni span:after {
+  content: "/";
+  color: #ffb148;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.commenti ol li.comment .commento .desc .azioni span:last-child:after {
+    content: "";
+    margin: 0;
+}
+
+/**
+ * Form
+ */
+#respond {
+    margin-top: 20px;
+}
+
+#respond .intestazione {
+  height: 20px;
+  font-size: 20px;
+}
+
+#respond .intestazione-container {
+  width: 100%;
+  border-bottom: 1px solid #ffb148;
+  height: 50%;
+}
+
+#respond .intestazione-container .intestazione-desc {
+  margin-left: 20%;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #f9f9f9;
+  line-height: 20px;
+  float: left;
+}
+
+#respond .intestazione .sep {
+  color: #ffb148;
+  font-weight: 600;
+}
+
+#respond .intestazione-container .intestazione-desc a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#respond .intestazione-container .intestazione-desc a:hover {
+  color: #ffb148;
+}
+
+#commentform {
+  margin-left: 20%;
+  margin-top: 20px;
+}

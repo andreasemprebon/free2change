@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/post.css" />
 
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/single.css" />
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/comments.css" />
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/footer.css" />
 
@@ -109,11 +110,11 @@
 				<div class="mobile-menu">
 					<div class="mobile-icon">
 
-							<div class="icon blog">
+							<!--<div class="icon blog">
 									<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>">
 											<?php include(get_stylesheet_directory() . "/img/menu/blog.svg"); ?>
 									</a>
-							</div>
+							</div>-->
 
 							<div class="icon more">
 									<a href="#">

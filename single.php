@@ -15,7 +15,7 @@
 				comments_template();
 			}
 
-			if ( is_singular( 'attachment' ) ) {
+			/*if ( is_singular( 'attachment' ) ) {
 				// Parent post navigation.
 				the_post_navigation( array(
 					'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen' ),
@@ -30,7 +30,7 @@
 						'<span class="screen-reader-text">' . __( 'Previous post:', 'twentysixteen' ) . '</span> ' .
 						'<span class="post-title">%title</span>',
 				) );
-			}
+			}*/
 
 			// End of the loop.
 		endwhile;
@@ -40,5 +40,5 @@
 
 </div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

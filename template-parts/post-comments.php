@@ -10,50 +10,43 @@ function free2change_comments( $comment, $args, $depth ) {
 				global $post;
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment">
-			<header class="comment-meta comment-author vcard">
-				<?php
-					echo get_avatar( $comment, 44 );
-					printf(
-						'<cite><b class="fn">%1$s</b> %2$s</cite>',
-						get_comment_author_link(),
-						// If current post author is also comment author, make it known visually.
-						( $comment->user_id === $post->post_author ) ? '<span>' . __( 'Post author', 'twentytwelve' ) . '</span>' : ''
-					);
-					printf(
-						'<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
-						esc_url( get_comment_link( $comment->comment_ID ) ),
-						get_comment_time( 'c' ),
-						/* translators: 1: date, 2: time */
-						sprintf( __( '%1$s at %2$s', 'twentytwelve' ), get_comment_date(), get_comment_time() )
-					);
-					?>
-				</header><!-- .comment-meta -->
+			<div class="commento">
+        <div class="avatar">
+          <?php echo get_avatar( $comment, $size = '50' ); ?>
+					<?php if ($comment->user_id === $post->post_author): // Se chi commenta è l'autore, lo segnalo ?>
+							<div class="commento-dell-autore">
+								<?php include(get_stylesheet_directory() . "/img/menu/blog.svg"); ?>
+							</div>
+					<?php endif; ?>
+         </div>
+         <div class="desc">
+           <p class="nome">
+						 <?php echo get_comment_author_link(); ?>
+						 <span class="data"><?php echo get_comment_date() ." ". get_comment_time(); ?></span>
+					 </p>
 
-				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twentytwelve' ); ?></p>
-			<?php endif; ?>
-
-				<section class="comment-content comment">
-				<?php comment_text(); ?>
-				<?php edit_comment_link( __( 'Edit', 'twentytwelve' ), '<p class="edit-link">', '</p>' ); ?>
-				</section><!-- .comment-content -->
-
-				<div class="reply">
-				<?php
-				comment_reply_link(
-					array_merge(
-						$args, array(
-							'reply_text' => __( 'Reply', 'twentytwelve' ),
-							'after'      => ' <span>&darr;</span>',
-							'depth'      => $depth,
-							'max_depth'  => $args['max_depth'],
-						)
-					)
-				);
-?>
-				</div><!-- .reply -->
-			</article><!-- #comment-## -->
+					 <?php if ( $comment->comment_approved == '0' ) : ?>
+						 	<p class="moderazione">
+	 							Il tuo commento è in attesa di moderazione.
+							</p>
+	 				 <?php endif; ?>
+           <?php comment_text(); ?>
+					 <p class="azioni">
+						 <?php edit_comment_link("Modifica", '<span class="edit-link">', '</span>' ); ?>
+							<span class="reply-link">
+								<?php comment_reply_link(
+				 					array_merge(
+				 						$args, array(
+				 							'reply_text' => "Rispondi",
+				 							'depth'      => $depth,
+				 							'max_depth'  => $args['max_depth'],
+				 						)
+				 					)
+				 				); ?>
+						</span>
+					 </p>
+         </div>
+      </div>
 		<?php
 				break;
 		endswitch; // end comment_type check
