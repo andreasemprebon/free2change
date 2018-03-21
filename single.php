@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php require_once( get_template_directory() .'/template-parts/post-comments.php' ); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main single" role="main">

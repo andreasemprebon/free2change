@@ -7,6 +7,9 @@
 #main.single {
     width: 100%;
     max-width: 1024px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #EEE;
+    border-right: 1px solid #EEE;
 }
 
 div.single {
@@ -36,7 +39,7 @@ div.single {
 
 .single .header .titolo {
     font-size: 35px;
-    background-color: #FFFFFF;
+    background-color: #f9f9f9;
     width: 80%;
     position: absolute;
     bottom: 0;
@@ -56,14 +59,14 @@ div.single {
  */
 
 .metadata {
-  margin-top: 15px;
+  margin-top: 20px;
   height: 16px;
   font-size: 16px;
 }
 
 .metadata div.datum {
   float: left;
-  background-color: #FFFFFF;
+  background-color: #f9f9f9;
   padding-left: 5px;
   padding-right: 5px;
 
@@ -72,7 +75,7 @@ div.single {
 
 .metadata .metadata-container {
   width: 100%;
-  border-bottom: 2px solid #ffb148;
+  border-bottom: 1px solid #ffb148;
   height: 50%;
 }
 
@@ -96,7 +99,7 @@ div.single {
   font-family: 'Assistant', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  margin-top: 15px;
+  margin-top: 20px;
   width: calc(80% - 30px); /* 30px è il padding right del titolo */
   margin-left: 20%;
   padding: 0;
@@ -104,6 +107,49 @@ div.single {
 }
 
 .single .testo img {
-  max-width: 100%; /* 30px è il padding right del titolo */
+  max-width: 100%;
   height: auto;
+}
+
+/**
+ * Descrizione autore
+ */
+
+.single .autore-desc {
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-right: 30px;  /* 30px è il padding right del titolo e del testo */
+  padding: 20px;
+  border: 1px solid #EEE;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.single .autore-desc .avatar {
+  flex-basis: 50px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.single .autore-desc .avatar img {
+  border-radius: 50%;
+  border: 1px solid #EEE;
+}
+
+.single .autore-desc .desc {
+  text-align: justify;
+  padding-left: 20px;
+}
+
+.single .autore-desc .desc .nome {
+  font-size: 18px;
+  color: #ffb148;
+  font-weight: 600;
 }

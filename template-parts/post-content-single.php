@@ -1,3 +1,15 @@
+<script text="type/javascript">
+    $(document).ready(function () {
+        /**
+         * Imposto come attiva la pagine blog
+         */
+        $(".menu a.blog").addClass("active");
+
+        $(".mobile-menu div.blog").addClass("active");
+
+    });
+</script>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -5,7 +17,6 @@
  * Date: 18/03/18
  * Time: 13:13
  */
-
 $postData = get_posts($postParameters);
 ?>
 
@@ -46,8 +57,13 @@ $postData = get_posts($postParameters);
       </div>
 
       <div class="autore-desc">
-           <? echo get_avatar( get_the_author_meta('user_email'), $size = '50'); ?>
-          <?php echo nl2br(get_the_author_meta('description')); ?>
+        <div class="avatar">
+          <?php echo get_avatar( get_the_author_meta('user_email'), $size = '50'); ?>
+         </div>
+         <div class="desc">
+           <p class="nome"><?php echo the_author_meta( 'display_name', $postData[0]->post_author ); ?></p>
+           <?php echo nl2br(get_the_author_meta('description')); ?>
+         </div>
       </div>
 
 
