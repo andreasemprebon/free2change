@@ -1,15 +1,3 @@
-<script text="type/javascript">
-    $(document).ready(function () {
-        /**
-         * Imposto come attiva la pagine blog
-         */
-        $(".menu a.blog").addClass("active");
-
-        $(".mobile-menu div.blog").addClass("active");
-
-    });
-</script>
-
 <?php
 /**
  * Created by PhpStorm.

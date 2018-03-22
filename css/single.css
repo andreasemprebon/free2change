@@ -81,7 +81,7 @@ div.single {
 }
 
 .metadata div.datum:first-child {
-  margin-left: 20%; /* 20% perchè il titolo è largo 80% */
+  margin-left: calc(20% - 5px); /* 20% perchè il titolo è largo 80% */
 }
 
 .metadata div.datum.autore {
@@ -154,3 +154,51 @@ div.single {
   color: #ffb148;
   font-weight: 600;
 }
+
+/**
+ * MOBILE
+ */
+ @media only screen and (max-width: 768px) {
+
+   #main.single {
+       border-left: none;
+       border-right: none;
+       border-bottom: none;
+   }
+
+   .single .header .contenuto {
+      height: 200px;
+   }
+
+   .single .header .titolo {
+     position: relative;
+     width: auto;
+     padding-left: 20px;
+     padding-top: 20px;
+     padding-right: 20px;
+     padding-bottom: 0px;
+   }
+
+   .single .header .titolo p {
+     width: 100%;
+     padding-left: 0px;
+     padding-right: 0px;
+   }
+
+  .metadata div.datum:first-child {
+    margin-left: 15px; /* Padding left del titolo è 20px - 5px di padding */
+  }
+
+  .single .testo {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .single .autore-desc {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+  }
+
+ }

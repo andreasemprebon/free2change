@@ -1,6 +1,15 @@
 <?php get_header(); ?>
 <?php require_once( get_template_directory() .'/template-parts/post-comments.php' ); ?>
 
+<script text="type/javascript">
+    $(document).ready(function () {
+        /**
+         * Imposto come attiva la pagine blog
+         */
+        $(".menu a.blog").addClass("active");
+    });
+</script>
+
 <div id="primary" class="content-area">
 	<main id="main" class="site-main single" role="main">
 		<?php

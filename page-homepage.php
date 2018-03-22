@@ -41,12 +41,27 @@
 
     <div class="container">
 
-        <div class="image" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/img/slideshow/foto0.jpg');">
+        <?php
+          /**
+           * Recupero i post che hanno come categoria "In Evidenza".
+           * Per ora mi limito a 2, vediamo in futuro come espanderli
+           */
+           query_posts( array(
+              'category_name'   => 'in-evidenza',
+              'posts_per_page'  => 2,
+              'order_by'        => 'date',
+              'order'           => 'DESC'
+          ) );
+
+          while ( have_posts() ) : the_post();
+         ?>
+
+        <div class="image" style="background-image: url('<?php echo catch_first_image(); ?>');">
             <div class="background-nero-opaco"></div>
 
             <div class="contenuto">
                 <p class="titolo">
-                    Alberi gialli come fotografia titolo su due righe
+                    <?php the_title(); ?>
                 </p>
 
                 <a href="#"class="btn btn-leggi">Continua &rarr;</a>
@@ -54,18 +69,7 @@
 
         </div>
 
-        <div class="image" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/img/slideshow/foto1.jpg');">
-            <div class="background-nero-opaco"></div>
-
-            <div class="contenuto">
-                <p class="titolo">
-                    Articolo in cui si protesta
-                </p>
-
-                <a href="#" class="btn btn-leggi">Continua &rarr;</a>
-            </div>
-
-        </div>
+      <?php endwhile; ?>
 
     </div>
 
