@@ -64,7 +64,7 @@
                     <?php the_title(); ?>
                 </p>
 
-                <a href="#"class="btn btn-leggi">Continua &rarr;</a>
+                <a href="<?php echo esc_url( get_permalink() ); ?>"class="btn btn-leggi">Continua &rarr;</a>
             </div>
 
         </div>
