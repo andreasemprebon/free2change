@@ -27,11 +27,11 @@ function catch_first_image() {
 function post_content_without_first_image() {
     global $post;
     $first_img = "";
+    $content = $post->post_content;
 
-    $output = preg_match_all('/(<img.+src=[\'"][^\'"]+[\'"].*>)/i', $post->post_content, $matches);
+    $output = preg_match_all('/(<img.+src=[\'"][^\'"]+[\'"].*>)/i', $content, $matches);
 
     $first_img = $matches[1][0];
-    $content = $post->post_content;
 
     /**
      * Non ho trovato nessuna immagine,
@@ -41,11 +41,11 @@ function post_content_without_first_image() {
         $content = str_replace($first_img, "", $content);
     }
 
-    return $content;
+    return wpautop($content);
 }
 
 function custom_excerpt_length( $length ) {
-    return 35;
+    return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
 

@@ -4,62 +4,65 @@
  * ############
  */
 
-header.main-header {
-    width: 100%;
-    height: 130px;
-    max-height: 130px;
-    padding-top: 15px;
-}
+ header.main-header {
+ 	width: 100%;
+ 	height: 130px;
+ 	max-height: 130px;
+ 	padding-top: 15px;
+ }
 
-header.main-header .header-container {
-    width: 100%;
-    border-bottom: 3px solid #ffb148;
-    height: 50%;
-}
+ header.main-header .header-container {
+ 	width: 100%;
+ 	border-bottom: 3px solid #ffb148;
+ 	height: 50%;
+ }
 
-header.main-header:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
+ header.main-header:after {
+ 	content: ".";
+ 	display: block;
+ 	height: 0;
+ 	clear: both;
+ 	visibility: hidden;
+ }
 
-header.main-header .left-link {
-    float: left;
-    width: 33.33333333%;
-    margin-top: 30px;
-}
+ header.main-header .left-link {
+ 	float: left;
+ 	width: 33.33333333%;
+ 	margin-top: 30px;
+ }
 
-header.main-header .logo {
-    text-align: center;
-}
+ header.main-header .logo {
+ 	text-align: center;
+ }
 
-header.main-header .right-link {
-    float: right;
-    width: 33.33333333%;
-    margin-top: 30px;
-}
+ header.main-header .right-link {
+ 	float: right;
+ 	width: 33.33333333%;
+ 	margin-top: 0px;
+ 	position: relative;
+ 	right: 50px;
+ 	text-align: right;
+ }
 
-header.main-header .logo-border {
-    float: left;
-    width: 33.33333333%;
-}
+ header.main-header .logo-border {
+ 	float: left;
+ 	width: 33.33333333%;
+ }
 
-header.main-header .logo img {
-    max-height: 130px;
-}
+ header.main-header .logo img {
+ 	max-height: 130px;
+ }
 
-header.main-header .logo img.logo-mobile {
-  display: none;
-}
+ header.main-header .logo img.logo-mobile {
+ 	display: none;
+ }
 
-header.main-header a.logo-bg {
-    background: #FFFFFF;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: inline-block;
-}
+ header.main-header a.logo-bg {
+ 	background: #FFFFFF;
+ 	padding-left: 10px;
+ 	padding-right: 10px;
+ 	display: inline-block;
+ }
 
 /**
  * ##############
@@ -67,22 +70,47 @@ header.main-header a.logo-bg {
  * ##############
  */
 
-header.main-header .social {
-    margin-left: 50px;
-}
+ header.main-header .social {
+ 	margin-left: 50px;
+ }
 
-header.main-header .social .icon {
-    float: left;
-    padding-right: 5px;
-}
+ header.main-header .social .icon {
+ 	float: left;
+ 	padding-right: 5px;
+ }
 
-header.main-header .social .icon svg {
-    height: 35px;
-}
+ header.main-header .social .icon svg {
+ 	height: 35px;
+ }
 
-header.main-header .social .icon svg:hover {
-    fill: #3b5998;
-}
+ header.main-header .social .icon.mail svg {
+ 	height: 28px;
+ 	margin-left: 8px;
+ 	margin-top: 2px;
+ }
+
+ header.main-header .social .icon svg:hover {
+ 	fill: #3b5998;
+ }
+
+/**
+ * ############
+ * ### SEDI ###
+ * ############
+ */
+
+ header.main-header .right-link .sede svg {
+ 	position: relative;
+ 	height: 55px;
+ }
+
+ header.main-header .right-link .sede.milano svg {
+ 	top: 18px;
+ }
+
+ header.main-header .right-link .sede.roma svg {
+ 	top: 23px;
+ }
 
 /**
  * ###########################
@@ -90,10 +118,10 @@ header.main-header .social .icon svg:hover {
  * ###########################
  */
 
-.btn {
-    transition: background 0.2s, color 0.2s;
-    transition-timing-function: ease-in-out;
-}
+ .btn {
+ 	transition: background 0.2s, color 0.2s;
+ 	transition-timing-function: ease-in-out;
+ }
 
 /**
  * ##############
@@ -101,102 +129,102 @@ header.main-header .social .icon svg:hover {
  * ##############
  */
  header.main-header .mobile-menu {
-     display: none;
-     float: right;
-     margin-top: 21px;
+ 	display: none;
+ 	float: right;
+ 	margin-top: 21px;
  }
 
  header.main-header .mobile-icon {
-   margin-left: auto;
-   margin-right: auto;
+ 	margin-left: auto;
+ 	margin-right: auto;
  }
 
  header.main-header .mobile-icon .icon {
-     float: left;
-     padding: 5px;
-     border-radius: 50%;
-     margin-right: 5px;
-     margin-left: 5px;
-     background-color: #FFFFFF;
+ 	float: left;
+ 	padding: 5px;
+ 	border-radius: 50%;
+ 	margin-right: 5px;
+ 	margin-left: 5px;
+ 	background-color: #FFFFFF;
  }
 
  header.main-header .mobile-icon .icon:last-child {
-   margin-right: 20px;
+ 	margin-right: 20px;
  }
 
  header.main-header .mobile-icon .icon svg {
-     height: 40px;
-     fill: #000000;
+ 	height: 40px;
+ 	fill: #000000;
  }
 
  header.main-header .mobile-icon .icon.active svg,
  header.main-header .mobile-icon .icon svg:hover {
-     fill: #ffb148;
+ 	fill: #ffb148;
  }
 
 /**
  * Animazioni
  */
-.rotazioneOraria {
-  animation-duration: 0.5s;
-  animation-name: rotazioneOraria;
-  animation-fill-mode: forwards;
-}
+ .rotazioneOraria {
+ 	animation-duration: 0.5s;
+ 	animation-name: rotazioneOraria;
+ 	animation-fill-mode: forwards;
+ }
 
  @keyframes rotazioneOraria {
-   from {
-     transform: rotate(0deg);
-  }
+ 	from {
+ 		transform: rotate(0deg);
+ 	}
 
-  to {
-    transform: rotate(90deg);
-  }
-}
+ 	to {
+ 		transform: rotate(90deg);
+ 	}
+ }
 
-.rotazioneAntiOraria {
-  animation-duration: 0.5s;
-  animation-name: rotazioneAntiOraria;
-  animation-fill-mode: forwards;
-}
+ .rotazioneAntiOraria {
+ 	animation-duration: 0.5s;
+ 	animation-name: rotazioneAntiOraria;
+ 	animation-fill-mode: forwards;
+ }
 
  @keyframes rotazioneAntiOraria {
-   from {
-     transform: rotate(90deg);
-  }
+ 	from {
+ 		transform: rotate(90deg);
+ 	}
 
-  to {
-    transform: rotate(0deg);
-  }
-}
+ 	to {
+ 		transform: rotate(0deg);
+ 	}
+ }
 
  @media only screen and (max-width: 768px) {
 
-   header.main-header {
-     max-height: 88px;
-   }
+ 	header.main-header {
+ 		max-height: 88px;
+ 	}
 
-   header.main-header .logo img {
-     max-height: 90px;
-   }
+ 	header.main-header .logo img {
+ 		max-height: 90px;
+ 	}
 
-   header.main-header .logo {
-     text-align: left;
-   }
+ 	header.main-header .logo {
+ 		text-align: left;
+ 	}
 
-   header.main-header .logo img.logo-desktop {
-      display: none;
-   }
+ 	header.main-header .logo img.logo-desktop {
+ 		display: none;
+ 	}
 
-   header.main-header .logo img.logo-mobile {
-     display: inline;
-   }
+ 	header.main-header .logo img.logo-mobile {
+ 		display: inline;
+ 	}
 
-   .main-header .left-link,
-   .main-header .right-link {
-     display: none;
-   }
+ 	.main-header .left-link,
+ 	.main-header .right-link {
+ 		display: none;
+ 	}
 
-   header.main-header .mobile-menu {
-     display: block;
-   }
-}
+ 	header.main-header .mobile-menu {
+ 		display: block;
+ 	}
+ }

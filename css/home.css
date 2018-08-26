@@ -13,6 +13,7 @@
     height: 100%;
     box-sizing: border-box;
     background-size: cover;
+    background-position: center;
 }
 
 .slideshow .container .image:nth-child(odd) {

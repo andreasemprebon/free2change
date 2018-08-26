@@ -17,6 +17,8 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
+	
+	<title>Free2Change</title>
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/reset.css" />
 
@@ -57,14 +59,40 @@
 				 * mostro il menù
          */
         $(".mobile-menu").on("click", ".icon.more", function () {
-						if ( $(this).hasClass("rotazioneOraria") ) {
-							$(this).addClass("rotazioneAntiOraria").removeClass("rotazioneOraria");
-							$(".menu").hide(500);
-						} else {
-							$(this).addClass("rotazioneOraria").removeClass("rotazioneAntiOraria");
-							$(".menu").show(500);
-						}
-				});
+			if ( $(this).hasClass("rotazioneOraria") ) {
+				$(this).addClass("rotazioneAntiOraria").removeClass("rotazioneOraria");
+				$(".menu").hide(500);
+			} else {
+				$(this).addClass("rotazioneOraria").removeClass("rotazioneAntiOraria");
+				$(".menu").show(500);
+			}
+		});
+
+        $(".menu .container").on("click", ".cosa-facciamo", function () {
+            var cosaFacciamoSubMenuId = "#cosa-facciamo-second-level";
+
+            var isCosaFacciamoVisible = ($(cosaFacciamoSubMenuId).css('display') !== 'none');
+            var isPositionAbsolute = ($(cosaFacciamoSubMenuId).css('position') === 'absolute');
+
+            if (isCosaFacciamoVisible) {
+                $(cosaFacciamoSubMenuId).hide();
+                $(".cosa-facciamo .submenu-arrow").html("&darr;");
+
+				if (isPositionAbsolute) {
+	                $(".content-area, .slideshow").css("margin-top", "0px");
+				}
+
+            } else {
+                $(cosaFacciamoSubMenuId).show();
+                $(".cosa-facciamo .submenu-arrow").html("&uarr;");
+
+                if (isPositionAbsolute) {
+	                $(".content-area, .slideshow").css("margin-top", $(cosaFacciamoSubMenuId).height() + "px");
+				}
+            }
+
+            return false;
+        });
 
     });
 </script>
@@ -78,14 +106,20 @@
             <div class="social">
 
                 <div class="icon facebook">
-                    <a href="#">
+                    <a href="https://www.facebook.com/32Change" target="_blank">
                         <?php include(get_stylesheet_directory() . "/img/social/facebook.svg"); ?>
                     </a>
                 </div>
 
                 <div class="icon instagram">
-                    <a href="#">
+                    <a href="https://www.instagram.com/32change/" target="_blank">
                         <?php include(get_stylesheet_directory() . "/img/social/instagram.svg"); ?>
+                    </a>
+                </div>
+
+                <div class="icon mail">
+                    <a href="mailto:free2change@outlook.com," target="_blank">
+                        <?php include(get_stylesheet_directory() . "/img/social/mail.svg"); ?>
                     </a>
                 </div>
 
@@ -104,7 +138,8 @@
         </div>
 
         <div class="right-link">
-            Ciao
+            <!-- Mostra cose alla destra del logo -->
+            Sede a <span class="sede milano"><?php include(get_stylesheet_directory() . "/img/citta/milano.svg"); ?></span> e <span class="sede roma"><?php include(get_stylesheet_directory() . "/img/citta/roma.svg"); ?></span>
         </div>
 
 				<div class="mobile-menu">
@@ -142,35 +177,48 @@
             </li>
 
             <li>
-                <a href="#" class="chi-siamo">
-                    Chi Siamo
+                <?php $idPagineChiSiamo = 95; ?>
+                <a href="<?php echo esc_html( get_the_permalink($idPagineChiSiamo) ); ?>" class="chi-siamo">
+                    <?php echo esc_html( get_the_title($idPagineChiSiamo) ); ?>
                 </a>
             </li>
 
             <li>
-                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>" class="blog">
-                    Blog
+                <a href="#" class="cosa-facciamo">
+                    Cosa Facciamo <span class="submenu-arrow">&darr;</span>
                 </a>
-            </li>
+            
 
-            <li>
-                <a href="#" class="crowdfunding">
-                    Crowdfunding
-                </a>
-            </li>
+		        <ul id="cosa-facciamo-second-level" class="second-level" style="display: none;">
+		            <?php
+						$categories = get_categories(array(
+							'orderby' => 'name',
+							'order'   => 'ASC'
+						) );
+						
+						$id_categoria_evidenza = 2;
 
-            <li>
-                <a href="#" class="careers">
-                    Careers
-                </a>
+						foreach ($categories as $category) {
+							if ($category->term_id == $id_categoria_evidenza)
+								continue;
+							$menu_item = '<li>';
+							$menu_item .= '<a href="'.esc_url( get_category_link( $category->term_id ) ).'">';
+							$menu_item .= esc_html( $category->name );
+							$menu_item .= '</a>';
+							$menu_item .= '</li>';
+							echo $menu_item;
+						}
+						
+					?>
+		        </ul>
             </li>
-
+            <!--
             <li>
                 <a href="#" class="contatti">
                     Contatti
                 </a>
             </li>
-
+            -->
         </ul>
 
     </div>

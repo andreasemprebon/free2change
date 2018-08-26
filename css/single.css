@@ -4,201 +4,233 @@
  * ##############
  */
 
-#main.single {
-    width: 100%;
-    max-width: 1024px;
-    background-color: #f9f9f9;
-    border-left: 1px solid #EEE;
-    border-right: 1px solid #EEE;
-    border-bottom: 1px solid #EEE;
-}
+ #main.single {
+ 	width: 100%;
+ 	max-width: 1024px;
+ 	background-color: #f9f9f9;
+ 	border-left: 1px solid #EEE;
+ 	border-right: 1px solid #EEE;
+ 	border-bottom: 1px solid #EEE;
+ }
 
-div.single {
-    position: relative;
-    font-size: 15px;
-    height: 100%;
-}
+ div.single {
+ 	position: relative;
+ 	font-size: 15px;
+ 	height: 100%;
+ }
 
 /**
  * HEADER
  */
 
-.single .header {
-    position: relative;
-    width: 100%;
-    height: 30%;
-}
+ .single .header {
+ 	position: relative;
+ 	width: 100%;
+ 	height: 30%;
+ }
 
-.single .header .contenuto {
-    display: block;
-    box-sizing: border-box;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 350px;
-}
+ .single .header .contenuto {
+ 	display: block;
+ 	box-sizing: border-box;
+ 	background-size: cover;
+ 	background-position: center center;
+ 	width: 100%;
+ 	height: 350px;
+ }
 
-.single .header .titolo {
-    font-size: 35px;
-    background-color: #f9f9f9;
-    width: 80%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding-left: 30px;
-    padding-top: 30px;
-}
+ .single .header .titolo {
+ 	font-size: 35px;
+ 	background-color: #f9f9f9;
+ 	width: 80%;
+ 	position: absolute;
+ 	bottom: 0;
+ 	right: 0;
+ 	padding-left: 30px;
+ 	padding-top: 30px;
+ }
 
 
-.single .header .titolo p {
-    width: calc(100% - 30px);
-    padding-right: 30px;
-}
+ .single .header .titolo p {
+ 	width: calc(100% - 30px);
+ 	padding-right: 30px;
+ }
 
 /**
  * Metadata
  */
 
-.metadata {
-  margin-top: 20px;
-  height: 16px;
-  font-size: 16px;
-}
+ .metadata {
+ 	margin-top: 20px;
+ 	height: 16px;
+ 	font-size: 16px;
+ }
 
-.metadata div.datum {
-  float: left;
-  background-color: #f9f9f9;
-  padding-left: 5px;
-  padding-right: 5px;
+ .metadata div.datum {
+ 	float: left;
+ 	background-color: #f9f9f9;
+ 	padding-left: 5px;
+ 	padding-right: 5px;
 
-  line-height: 16px;
-}
+ 	line-height: 16px;
+ }
 
-.metadata .metadata-container {
-  width: 100%;
-  border-bottom: 1px solid #ffb148;
-  height: 50%;
-}
+ .metadata .metadata-container {
+ 	width: 100%;
+ 	border-bottom: 1px solid #ffb148;
+ 	height: 50%;
+ }
 
-.metadata div.datum:first-child {
-  margin-left: calc(20% - 5px); /* 20% perchè il titolo è largo 80% */
-}
+ .metadata div.datum:first-child {
+ 	margin-left: calc(20% - 5px); /* 20% perchè il titolo è largo 80% */
+ }
 
-.metadata div.datum.autore {
-  color: #3c3c3c;
-}
+ .metadata div.datum.autore {
+ 	color: #3c3c3c;
+ }
 
-.metadata div.datum.data {
-  font-size: 12px;
-  color: rgb(153, 153, 153);
-}
+ .metadata div.datum.data {
+ 	font-size: 12px;
+ 	color: rgb(153, 153, 153);
+ }
 
 /**
  * Testo
  */
-.single .testo {
-  font-family: 'Assistant', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-top: 20px;
-  width: calc(80% - 30px); /* 30px è il padding right del titolo */
-  margin-left: 20%;
-  padding: 0;
-  text-align: justify;
-}
+ .single .testo {
+ 	font-family: 'Assistant', sans-serif;
+ 	font-size: 16px;
+ 	line-height: 1.6;
+ 	margin-top: 20px;
+ 	width: calc(80% - 30px); /* 30px è il padding right del titolo */
+ 	margin-left: 20%;
+ 	padding: 0;
+ 	text-align: justify;
+ }
 
-.single .testo img {
-  max-width: 100%;
-  height: auto;
-}
+ .single .testo img {
+ 	max-width: 100%;
+ 	height: auto;
+ }
+
+ .single .testo ul {
+ 	list-style-type: circle;
+ }
+
+ .single .testo ul li {
+ 	margin-top: 5px;
+ }
+
+ .single .testo strong {
+ 	font-weight: bold;
+ }
+
+ .single .testo h2 {
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ 	font-weight: bold;
+ 	font-size: 25px;
+ 	color: #ffb148;
+ }
+
+ .single .testo a,
+ .single .testo a:hover,
+ .single .testo a:active,
+ .single .testo a:visited {
+ 	text-decoration: none;
+ 	color: #ffb148
+ }
+
+ .single .testo a:hover {
+ 	text-decoration: underline;
+ }
 
 /**
  * Descrizione autore
  */
 
-.single .autore-desc {
-  margin-top: 20px;
-  margin-left: 20%;
-  margin-right: 30px;  /* 30px è il padding right del titolo e del testo */
-  padding: 20px;
-  border: 1px solid #EEE;
-  background-color: #FFFFFF;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-  font-family: 'Assistant', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-}
+ .single .autore-desc {
+ 	margin-top: 20px;
+ 	margin-left: 20%;
+ 	margin-right: 30px;  /* 30px è il padding right del titolo e del testo */
+ 	padding: 20px;
+ 	border: 1px solid #EEE;
+ 	background-color: #FFFFFF;
+ 	display: flex;
+ 	flex-direction: row;
+ 	align-items: flex-start;
+ 	justify-content: flex-start;
+ 	position: relative;
+ 	font-family: 'Assistant', sans-serif;
+ 	font-size: 16px;
+ 	line-height: 1.6;
+ }
 
-.single .autore-desc .avatar {
-  flex-basis: 50px;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
+ .single .autore-desc .avatar {
+ 	flex-basis: 50px;
+ 	flex-shrink: 0;
+ 	flex-grow: 0;
+ }
 
-.single .autore-desc .avatar img {
-  border-radius: 50%;
-  border: 1px solid #EEE;
-}
+ .single .autore-desc .avatar img {
+ 	border-radius: 50%;
+ 	border: 1px solid #EEE;
+ }
 
-.single .autore-desc .desc {
-  text-align: justify;
-  padding-left: 20px;
-}
+ .single .autore-desc .desc {
+ 	text-align: justify;
+ 	padding-left: 20px;
+ }
 
-.single .autore-desc .desc .nome {
-  font-size: 18px;
-  color: #ffb148;
-  font-weight: 600;
-}
+ .single .autore-desc .desc .nome {
+ 	font-size: 18px;
+ 	color: #ffb148;
+ 	font-weight: 600;
+ }
 
 /**
  * MOBILE
  */
  @media only screen and (max-width: 768px) {
 
-   #main.single {
-       border-left: none;
-       border-right: none;
-       border-bottom: none;
-   }
+ 	#main.single {
+ 		border-left: none;
+ 		border-right: none;
+ 		border-bottom: none;
+ 	}
 
-   .single .header .contenuto {
-      height: 200px;
-   }
+ 	.single .header .contenuto {
+ 		height: 200px;
+ 	}
 
-   .single .header .titolo {
-     position: relative;
-     width: auto;
-     padding-left: 20px;
-     padding-top: 20px;
-     padding-right: 20px;
-     padding-bottom: 0px;
-   }
+ 	.single .header .titolo {
+ 		position: relative;
+ 		width: auto;
+ 		padding-left: 20px;
+ 		padding-top: 20px;
+ 		padding-right: 20px;
+ 		padding-bottom: 0px;
+ 	}
 
-   .single .header .titolo p {
-     width: 100%;
-     padding-left: 0px;
-     padding-right: 0px;
-   }
+ 	.single .header .titolo p {
+ 		width: 100%;
+ 		padding-left: 0px;
+ 		padding-right: 0px;
+ 	}
 
-  .metadata div.datum:first-child {
-    margin-left: 15px; /* Padding left del titolo è 20px - 5px di padding */
-  }
+ 	.metadata div.datum:first-child {
+ 		margin-left: 15px; /* Padding left del titolo è 20px - 5px di padding */
+ 	}
 
-  .single .testo {
-    width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+ 	.single .testo {
+ 		width: auto;
+ 		margin-left: 20px;
+ 		margin-right: 20px;
+ 	}
 
-  .single .autore-desc {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-  }
+ 	.single .autore-desc {
+ 		margin-left: 20px;
+ 		margin-right: 20px;
+ 		padding: 10px;
+ 	}
 
  }
