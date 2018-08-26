@@ -17,6 +17,8 @@
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
+	
+	<title>Free2Change</title>
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/reset.css" />
 
@@ -78,13 +80,13 @@
             <div class="social">
 
                 <div class="icon facebook">
-                    <a href="#">
+                    <a href="https://www.facebook.com/32Change" target="_blank">
                         <?php include(get_stylesheet_directory() . "/img/social/facebook.svg"); ?>
                     </a>
                 </div>
 
                 <div class="icon instagram">
-                    <a href="#">
+                    <a href="https://www.instagram.com/32change/" target="_blank">
                         <?php include(get_stylesheet_directory() . "/img/social/instagram.svg"); ?>
                     </a>
                 </div>
@@ -104,7 +106,7 @@
         </div>
 
         <div class="right-link">
-            Ciao
+            <!-- Mostra cose alla destra del logo -->
         </div>
 
 				<div class="mobile-menu">
@@ -147,23 +149,31 @@
                 </a>
             </li>
 
-            <li>
+            <!--<li>
                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>" class="blog">
                     Blog
                 </a>
-            </li>
+            </li>-->
+            <?php
+				$categories = get_categories(array(
+					'orderby' => 'name',
+					'order'   => 'ASC'
+				) );
+				
+				$id_categoria_evidenza = 2;
 
-            <li>
-                <a href="#" class="crowdfunding">
-                    Crowdfunding
-                </a>
-            </li>
-
-            <li>
-                <a href="#" class="careers">
-                    Careers
-                </a>
-            </li>
+				foreach ($categories as $category) {
+					if ($category->term_id == $id_categoria_evidenza)
+						continue;
+					$menu_item = '<li>';
+					$menu_item .= '<a href="'.esc_url( get_category_link( $category->term_id ) ).'">';
+					$menu_item .= esc_html( $category->name );
+					$menu_item .= '</a>';
+					$menu_item .= '</li>';
+					echo $menu_item;
+				}
+				
+			?>
 
             <li>
                 <a href="#" class="contatti">

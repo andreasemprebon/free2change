@@ -45,7 +45,7 @@ function post_content_without_first_image() {
 }
 
 function custom_excerpt_length( $length ) {
-    return 35;
+    return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999);
 

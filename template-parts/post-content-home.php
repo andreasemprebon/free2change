@@ -1,15 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Andrea
- * Date: 18/03/18
- * Time: 13:13
- */
-
-$postData = get_posts($postParameters);
-?>
-
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <div class="post">
@@ -20,10 +8,10 @@ $postData = get_posts($postParameters);
 
             <div class="data">
                 <span class="day">
-                    <?php echo get_the_date( 'd', $postData[0]->ID ) ?>
+                    <?php echo get_the_date( 'd') ?>
                 </span>
                 <span class="mese-anno">
-                    <?php echo get_the_date( 'M y', $postData[0]->ID ) ?>
+                    <?php echo get_the_date( 'M y' ) ?>
                 </span>
             </div>
         </div>
@@ -46,7 +34,7 @@ $postData = get_posts($postParameters);
             </div>
 
             <div class="autore">
-                di <?php echo the_author_meta( 'display_name', $postData[0]->post_author ); ?>
+                di <?php echo the_author_meta( 'display_name' ); ?>
             </div>
 
             <div class="estratto">
