@@ -89,6 +89,14 @@
  	margin-top: 2px;
  }
 
+ header.main-header .social .icon.twitter svg {
+ 	width: 24px;
+ 	height: auto;
+ 	margin-left: 8px;
+ 	position: relative;
+ 	top: 2px;
+ }
+
  header.main-header .social .icon svg:hover {
  	fill: #3b5998;
  }

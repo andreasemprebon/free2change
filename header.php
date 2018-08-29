@@ -24,6 +24,9 @@
 
 	<?php wp_head(); ?>
 
+    <!-- Favicon -->
+    <?php include(get_stylesheet_directory() . "/favicon.php"); ?>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
               integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -34,18 +37,18 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css" />
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/header.css" />
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/menu.css" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css?v2" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/header.css?v2" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/menu.css?v2" />
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/index.css" />
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/home.css" />
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/post.css" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/index.css?v2" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/home.css?v2" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/post.css?v2" />
 
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/single.css" />
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/comments.css" />
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/single.css?v2" />
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/comments.css?v2" />
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/footer.css" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/footer.css?v2" />
 
 </head>
 
@@ -117,8 +120,14 @@
                     </a>
                 </div>
 
+                <div class="icon twitter">
+                    <a href="https://twitter.com/change_free2" target="_blank">
+                        <?php include(get_stylesheet_directory() . "/img/social/twitter.svg"); ?>
+                    </a>
+                </div>
+
                 <div class="icon mail">
-                    <a href="mailto:free2change@outlook.com," target="_blank">
+                    <a href="mailto:free2change@outlook.com" target="_blank">
                         <?php include(get_stylesheet_directory() . "/img/social/mail.svg"); ?>
                     </a>
                 </div>
